@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,38 @@
     <link rel="icon" type="image/x-icon" href="./Icons/logo.png">
 </head>
 <body>
+   
     <div class="header">
+        <div class="bars">
+            <input type="checkbox" name="bars" id="bars">
+            <label for="bars">
+            <i class="fas fa-bars" id="bars"></i>
+            </label>
+        </div>
+        <div class="other-devices">
+            
+            <div class="phone-options">
+                
+                <div class="phone-nav">
+                    <div class="phone-logos">
+                        <img src="./Icons/logo.png"><h2 class="logo">WebKing</h2>
+                    </div>
+                    <div class="phone-options-option">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="new.html">New</a></li>
+                            <li><a href="top.html">Top</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="phone-account">
+                        <a href="#" class="phone-login">Login</a>
+                        <a href="#" class="phone-register">Register</a>
+                    </div>
+            </div>
+        </div>
+      
         <div class="nav">
             <div class="logos">
                 <img src="./Icons/logo.png"><h2 class="logo">WebKing</h2>
@@ -49,20 +81,62 @@
             </div>
             <p>_________________________________</p>
             <h2><span style="color: rgb(190, 64, 169);">Trending</span> templates</h2>
+            <div class="phone-images">
+                  <div class="temp"><img src="./Images/template2.jpg"></div>
+                  <div class="temp"><img src="./Images/template5.jpg"></div>
+                  <div class="temp"><img src="./Images/template1.jpg"></div>
+                  <div class="temp"><img src="./Images/template2.jpg"></div>
+                  <div class="temp"><img src="./Images/template7.jpg"></div>
+            </div>
+            <div id="slideshow">
+                <div class="slide-wrapper">
+                  <div class="slide"><img src="./Images/template2.jpg"></div>
+                  <div class="slide"><img src="./Images/template5.jpg"></div>
+                  <div class="slide"><img src="./Images/template1.jpg"></div>
+                  <div class="slide"><img src="./Images/template2.jpg"></div>
+                  <div class="slide"><img src="./Images/template7.jpg"></div>
+                  
+                </div>
 
-            <div class="trending">
-                <img src="./Images/template1.jpg" class="temp1">
-                <img src="./Images/template2.jpg" class="temp2">
-                <img src="./Images/template3.jpg" class="temp3">
-                <img src="./Images/template5.jpg" class="temp5">
-            </div>
-            <div class="trending">
-                <img src="./Images/template9.jpg" class="temp1">
-                <img src="./Images/template8.png" class="temp2">
-                <img src="./Images/template7.jpg" class="temp3">
-                <img src="./Images/template 4.jpg" class="temp4">
-            </div>
-    </div>
-    
+               </div>
+               <div class="find-btn">
+                <a href="#">Find More</a>
+                 </div>
+                 <p class="something">___________________________</p>
+                 <div class="figma">
+                    <h2>More than 2K+ UI/UX Templates</h2>
+                    <img src="./Images/figma.jpg">
+                 </div>
+                 <div class="figma-left">
+                    <h2>Find awesome Javascript functions</h2>
+                    <img src="./Images/js.jpg">
+                 </div>
+                 
+                    <div class="footer">
+                     <h2>&copy; 2023 All rights reserved</h2>
+                    </div>
+
+                    
+
 </body>
+<script>
+    const pNav = document.querySelector('.phone-options');
+    const bars = document.querySelector('#bars')
+    clicked = false
+    bars.addEventListener('click', () => {
+        if (clicked === false) {
+        pNav.classList.remove('inactive');
+        pNav.classList.add('active');
+        clicked = true
+        } else {
+            pNav.classList.remove('active')
+            pNav.classList.add('inactive');
+            clicked = false
+        }
+    })
+    
+    
+   
+</script>
+
 </html>
